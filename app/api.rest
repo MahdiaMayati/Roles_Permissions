@@ -1,0 +1,26 @@
+# put http://127.0.0.1:8000/api/orders/1
+# Accept :application/json
+# Authorization: Bearer {TOKEN}
+# POST http://127.0.0.1:8000/api/login
+# Accept: application/json
+# Content-Type: application/json
+
+# {
+#    "email": "user@example.com",
+#    "password":  "123123123"
+# }
+
+# POST http://127.0.0.1:8000/api/login
+# Accept: application/json
+# Content-Type: application/json
+
+# {
+#     "email": "user@example.com",
+#     "password": "12121212"
+# }
+# PUT http://127.0.0.1:8000/api/orders/1
+# Content-Type: application/json
+
+# {
+#     "status": "regected"
+# }
