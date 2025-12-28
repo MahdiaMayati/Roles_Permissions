@@ -15,11 +15,12 @@ class OrderController extends Controller
 
         $order->update($request->all());
         return response()->json([
-        'message' => 'تم تحديث حالة الطلب بنجاح مطابقاً لقواعد النظام.'
+        'message' => 'تم تحديث حالة الطلب بنجاح مطابقاً لقواعد النظام.',
+        'status'  => 'success',
+        'data'    => $order ,
             ], 200, [], JSON_UNESCAPED_UNICODE);
 
-        //     // 'order'   => $order
-        // ]);
+
     }
 
     public function destroy(Order $order)
