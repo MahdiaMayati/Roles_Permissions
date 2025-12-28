@@ -21,10 +21,18 @@ class AccessRuleService {
             }
 
             if ($key === 'status') {
-                // if ($model->status->value !== $value) return false;
-                if ($model->status !== $value) return false;
-            }
 
+                if ($model->status->value !== $value) return false;
+
+            // if ($model->status !== $value) return false; // نص عادي
+            // {"status": ["pending", "rejected"], "is_owner": true}
+            //  $currentStatus = is_object($model->status) ? $model->status->value : $model->status;
+            //  if (is_array($value)) {
+            //  if (!in_array($currentStatus, $value)) return false;
+            //  } else {
+            // if ($currentStatus !== $value) return false;
+            //  }
+            }
         }
 
         return true;

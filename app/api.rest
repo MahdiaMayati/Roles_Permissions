@@ -16,11 +16,13 @@
 
 # {
 #     "email": "user@example.com",
-#     "password": "12121212"
+#     "password":"12121212"
 # }
 # PUT http://127.0.0.1:8000/api/orders/1
+# Accept: application/json
 # Content-Type: application/json
+# Authorization: Bearer 1|wHZzp5cv6EfWlQlVVocQuUxYjYUFKjJXbhQ11G0N0798e16c
 
 # {
-#     "status": "regected"
+#     "status": "approved"
 # }

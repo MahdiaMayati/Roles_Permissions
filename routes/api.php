@@ -11,18 +11,23 @@ use Illuminate\Support\Facades\Auth;
 //     return $request->user();
 // });
 
-
 Route::post('/login', [AuthController::class, 'login']);
 
 Route::middleware('auth:sanctum')->group(function () {
 
+Route::put('/orders/{order}', [OrderController::class, 'update']);
+
 Route::delete('/orders/{order}', [OrderController::class, 'destroy']);
 
 });
-
-Route::put('/orders/{order}', [OrderController::class, 'update']);
-
-// Route::put('/orders/{order}', [OrderController::class, 'update']);
+// Route::get('/fix-user', function() {
+//     $user = \App\Models\User::where('email', 'user@example.com')->first();
+//     if ($user) {
+//         $user->update(['password' => \Illuminate\Support\Facades\Hash::make('12121212')]);
+//         return "تم تحديث كلمة المرور بنجاح إلى 12121212";
+//     }
+//     return "المستخدم غير موجود";
+// });
 //    Route::put('/orders/{order}', function (Request $request, \App\Models\Order $order) {
 
 //     if ($user = User::find(1)) {

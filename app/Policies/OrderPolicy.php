@@ -16,7 +16,7 @@ class OrderPolicy {
     }
 
     public function update(User $user, Order $order) {
-        $currentUser = $user ?? User::find(3);
+        // $currentUser = $user ?? User::find(3);
         return $this->ruleService->checkPermission($user, 'update', $order);
     }
     public function delete(User $user, Order $order)
